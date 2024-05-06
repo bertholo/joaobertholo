@@ -198,6 +198,7 @@ h3 { font-size: var(--fs-h3) }
 
 @media (min-width: 600px) {
     .intro {
+        padding: 2em 0;
         display: grid;
         width: min-content;
         margin: 0 auto;
@@ -280,6 +281,7 @@ h3 { font-size: var(--fs-h3) }
 
 @media (min-width: 600px) {
     .about-me {
+        padding-bottom: 2em;
         display: grid;
         grid-template-columns: 1fr 200px;
         grid-template-areas: 
@@ -312,6 +314,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .my-work {
+    padding-top: 2em;
     background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;    
