@@ -386,3 +386,9 @@ h3 { font-size: var(--fs-h3) }
 .social-list__link {
     padding: .5em;
 }
+
+.portfolio-item-individual {
+    padding: 5em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
