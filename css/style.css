@@ -228,9 +228,6 @@ h3 { font-size: var(--fs-h3) }
 
 .my-services {
     background-color: var(--clr-dark);
-    background-image: url(../img/services-bg.jpg);
-    background-size: cover;
-    /* background-blend-mode: multiply; */
     color: var(--clr-light);
     text-align: center;
 }
@@ -255,7 +252,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .service {
-    max-width: 500px;
+    max-width: 300px;
     margin: 0 auto;
 }
 
@@ -392,3 +389,4 @@ h3 { font-size: var(--fs-h3) }
     max-width: 1000px;
     margin: 0 auto;
 }
+
