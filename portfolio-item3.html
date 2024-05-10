@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Joao Bertholo Portifolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        <script src="https://kit.fontawesome.com/3ead623b8c.js" crossorigin="anonymous"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Go back Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--introduction-->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Project <strong>BOSS MACHINE</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Back-End Project</p>
+            <img src="img/boss-machine.png" alt="logo of the Project" class="intro__img">
+        </section>
+        <div class="portfolio-item-individual">
+            <p>In this project I created an entire API to serve information to a Boss Machine, a unique management
+                 application for today's most accomplished (evil) entrepreneurs.</p>
+            <p>This is a codecademy's project where the template, testing code and helper functions were provided 
+                and my goal was to create an entire API using the <strong>Express.js</strong> 
+                library from <strong>Node.js</strong> to wire everything together and make it responsive.
+            </p>
+            <p>The Project's purpose is to practice API management by building challenging routes and following CRUD (Create, Read, Update, Delete) operations to give 
+                functionality to the application. The faker Javascript library is used for generating fake data for testing 
+                purposes.
+            </p>
+            <img src="img/boss-machine-body.png" alt="" />
+            <p><strong>Routes used:</strong></p>
+            <p>/api/minions</p>
+                <ul>
+                    <li>GET /api/minions to get an array of all minions.</li>
+                    <li>POST /api/minions to create a new minion and save it to the database.</li>
+                    <li>GET /api/minions/:minionId to get a single minion by id.</li>
+                    <li>PUT /api/minions/:minionId to update a single minion by id.</li>
+                    <li>DELETE /api/minions/:minionId to delete a single minion by id.</li>
+                </ul>
+            <p>/api/ideas</p>
+                <ul>
+                    <li>GET /api/ideas to get an array of all ideas.</li>
+                    <li>POST /api/ideas to create a new idea and save it to the database.</li>
+                    <li>GET /api/ideas/:ideaId to get a single idea by id.</li>
+                    <li>PUT /api/ideas/:ideaId to update a single idea by id.</li>
+                    <li>DELETE /api/ideas/:ideaId to delete a single idea by id.</li>
+                </ul>
+            <p>/api/meetings</p>
+                <ul>
+                    <li>GET /api/meetings to get an array of all meetings.</li>
+                    <li>POST /api/meetings to create a new meeting and save it to the database.</li>
+                    <li>DELETE /api/meetings to delete all meetings from the database.</p></li>
+                </ul>
+            <p>For all /api/minions and /api/ideas routes, any POST or PUT requests will send their 
+                new/updated resources in the request body. POST request bodies do not have an id property, 
+                it is set based on the next id in sequence.</p>
+            <p>For /api/meetings POST route, no request body is necessary, as meetings are generated 
+                    automatically by the server upon request. The provided createMeeting function exported 
+                    from db.js creates a new meeting object.</p>
+            <img src="img/boss-machine-meetings.png" alt="" />
+            <p><strong>Schemas:</strong></p>
+                <ul>
+                    <li>Minion: 
+                        <ul>
+                            <li>id: string</li>
+                            <li>name: string</li>
+                            <li>title: string</li>
+                            <li>salary: number</li>
+                        </ul>
+                    </li>
+                    <li>Idea: 
+                        <ul>
+                            <li>id: string</li>
+                            <li>name: string</li>
+                            <li>description: string</li>
+                            <li>numWeeks: number</li>
+                            <li>weeklyRevenue: number</li>
+                        </ul>
+                    </li>
+                    <li>Meeting: 
+                        <ul>
+                            <li>time: string</li>
+                            <li>date: JS Date object</li>
+                            <li>day: string</li>
+                            <li>note: string</li>
+                        </ul>
+                    </li>
+                </ul>
+            <img src="img/boss-machine-minions.png" alt="" />
+            <p>Take note that many values that could be numbers are in fact strings. 
+                Since I wrote an API, I couldn't trust that data is always provided 
+                by a client.</p>
+        </div>
+          <!-- Footer -->
+        <footer class="footer" id="contact">
+            <a href="mailto:joao.bertholo@gmail.com" class="footer__link">joao.bertholo@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/bertholo">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/joao-pedro-bertholo-0b74232b9">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+        <script src="js/index.js"></script>
+
+    </body>
+</html>
