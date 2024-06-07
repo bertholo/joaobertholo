@@ -1,144 +1,167 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Joao Bertholo Portifolio Website</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
-        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
-        <script src="https://kit.fontawesome.com/3ead623b8c.js" crossorigin="anonymous"></script>
 
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!--introduction-->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                Hi, I am <strong>Joao Bertholo</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">Aspiring Full-Stack dev</p>
-            <img src="img/profile-pic.jpg" alt="a picture of Joao smiling" class="intro__img">
-        </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joao Bertholo Portifolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/3ead623b8c.js" crossorigin="anonymous"></script>
 
-         <!-- My services -->
-         <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">What I do</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Web Application Development</h3>
-                    <p>Create dynamic, modern and interactive web applications from scratch with the most popular technologies and frameworks available.
-                          Client-side and server-side development ensuring integration between the user interface (UI) and the server-side logic, using
-                          TDD (Test-Driven Development). This includes building user interfaces, implementing logic, integration with database and RESTful
-                           API development using CRUD operations.
-                    </p>
-                    <p>Preferably working with HTML5, CSS3, JavaScript and using the React framework for the front-end. Node.js 
-                        using Express.js library for the back-end logic. SQLite and MongoDB for database management and Mocha/Chai for 
-                        testing.
-                    </p>
-                </div> <!-- / service -->
-                
-                <div class="service">
-                    <h3>Customization and Maintenance</h3>
-                    <p>customize existing web applications or websites according to client requirements.
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-                    </p>
-                    <p>My work ranges from but is not limited to creating new features using git (version control system), optimize performance, fix bugs and ensure
-                         compatibility across browsers and devices. Additionally, I provide support and maintenance to ensure quality 
-                         of the web applications over time.
-                    </p>
-                </div> <!-- / service -->
-                
-                <div class="service">
-                    <h3>Contribute to Architecture Design</h3>
-                    <p>Help clients to plan and architect their web development projects advising on the technology stack selection
-                        , scalability and development methodologies.
-                    </p>
-                    <p>It is important to mention that I am still learning the above and can actively participate in discussions but 
-                        it is an area I am still making progress.
-                    </p>
-                </div> <!-- / service -->
-            </div> <!-- / services -->
-        </section>
-
-        <!-- About me -->
-        <section class="about-me" id="about">
-            <h2 class="section__title section__title--about">Who I am</h2>
-            <p class="section__subtitle section__subtitle--about">Full-Stack developer based in Bristol, UK</p>
-            
-            <div class="about-me__body">
-                <div class="about-me__body">
-                    <p>My name is Joao, aged 30, and I am currently transitioning into the field of web development.
-                         I will briefly outline my professional background:</p>
-                    <p>My journey began as a Deck Officer in the Brazilian Navy, where I gained valuable experience in team management,
-                         decision making, and working well under pressure. After three years, I pursued my interest for cooking and worked
-                          as a chef in Australia for five years.</p>
-                    <p>Now, I am excited to embark on a new career path in web development, where I can combine my passion for technology 
-                        with my desire to create meaningful solutions for people. My previous professions have given me transferable
-                         skills such as resilience, working with deadlines, and effective communication.</p>
-                    <p>I recently completed a Web Development course on the <strong>Codecademy</strong> platform, graduating in May 2024. I am proud of the
-                         projects I have completed so far, and I look forward to showcase them in the section below.</p>
-                </div>
-                
-            </div>
-            
-            <img src="img/about-me-pic.jpg" alt="Joao leaning against a airplane" class="about-me__img">
-         </section>
-        
-         <!-- My work -->
-
-         <section class="my-work" id="work">
-            <h2 class="section__title section__title--work">My work</h2>
-            <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
-            
-            <div class="portfolio">
-                <!-- Portfolio item 01 -->
-                <a href="portfolio-item1.html" class="portfolio__item">
-                    <img src="img/background_search_mobile.jpg" alt="" class="portfolio__img">
-                </a>
-                <!-- Portfolio item 02 -->
-                <a href="portfolio-item2.html" class="portfolio__item">
-                    <img src="img/background_photo_jamming.jpg" alt="" class="portfolio__img">
-                </a>
-                <!-- Portfolio item 03 -->
-                <a href="portfolio-item3.html" class="portfolio__item">
-                    <img src="img/boss-machine.png" alt="" class="portfolio__img">
-                </a>
-         </section>
-
-          <!-- Footer -->
-        <footer class="footer" id="contact">
-            <a href="mailto:joao.bertholo@gmail.com" class="footer__link">joao.bertholo@gmail.com</a>
-            <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/bertholo">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.linkedin.com/in/joao-pedro-bertholo-0b74232b9">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </li>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
-        </footer>
+        </nav>
+    </header>
+    <!--introduction-->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Hi, I am <strong>Joao Bertholo</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Full-Stack Web developer</p>
+        <img src="img/profile-pic.jpg" alt="a picture of Joao smiling" class="intro__img">
+    </section>
 
-        <script src="js/index.js"></script>
+    <!-- My services -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">What I do</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Web Application Development</h3>
+                <p>Create dynamic, modern and interactive web applications from scratch with the most popular
+                    technologies and frameworks available.
+                    Client-side and server-side development ensuring integration between the user interface (UI) and the
+                    server-side logic, using
+                    TDD (Test-Driven Development). This includes building user interfaces, implementing logic,
+                    integration with database and RESTful
+                    API development using CRUD operations.
+                </p>
+                <p>Preferably working with HTML5, CSS3, JavaScript and using the React framework for the front-end.
+                    Node.js
+                    using Express.js library for the back-end logic. SQLite and MongoDB for database management and
+                    Mocha/Chai for
+                    testing.
+                </p>
+            </div> <!-- / service -->
 
-    </body>
+            <div class="service">
+                <h3>Customization and Maintenance</h3>
+                <p>Customize existing web applications or websites according to client requirements.
+
+                </p>
+                <p>My work ranges from but is not limited to creating new features using git (version control system),
+                    optimize performance, fix bugs and ensure
+                    compatibility across browsers and devices. Additionally, I provide support and maintenance to ensure
+                    quality
+                    of the web applications over time.
+                </p>
+            </div> <!-- / service -->
+
+            <div class="service">
+                <h3>Contribute to Architecture Design</h3>
+                <p>Help clients to plan and architect their web development projects advising on the technology stack
+                    selection
+                    , scalability and development methodologies.
+                </p>
+                <p>It is important to mention that I am still learning the above and can actively participate in
+                    discussions but
+                    it is an area I am still making progress.
+                </p>
+            </div> <!-- / service -->
+        </div> <!-- / services -->
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle section__subtitle--about">Full-Stack developer based in Bristol, UK</p>
+
+        <div class="about-me__body">
+            <div class="about-me__body">
+                <p>My name is Joao, aged 30, and I am currently transitioning into the field of web development.
+                    I will briefly outline my professional background:</p>
+                <p>My journey began as a Deck Officer in the Brazilian Navy, where I gained valuable experience in team
+                    management,
+                    decision making, and working well under pressure. After three years, I pursued my interest for
+                    cooking and worked
+                    as a chef in Australia for five years.</p>
+                <p>Now, I am excited to embark on a new career path in web development, where I can combine my passion
+                    for technology
+                    with my desire to create meaningful solutions for people. My previous professions have given me
+                    transferable
+                    skills such as resilience, working with deadlines, and effective communication.</p>
+                <p>I recently completed a Web Development course on the <strong>Codecademy</strong> platform, graduated
+                    in May 2024. I am proud of the
+                    projects I have completed so far, and I look forward to showcase them in the section below.</p>
+            </div>
+
+        </div>
+
+        <img src="img/about-me-pic.jpg" alt="Joao leaning against a airplane" class="about-me__img">
+    </section>
+
+    <!-- My work -->
+
+    <section class="my-work" id="work">
+        <h2 class="section__title section__title--work">My work</h2>
+        <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+
+        <div class="portfolio">
+            <!-- Portfolio item 01 -->
+            <a href="https://bertholo.github.io/weather-app/" class="portfolio__item">
+                <img src="img/01d.png" alt="" class="portfolio__img">
+            </a>
+            <!-- Portfolio item 02 -->
+            <a href="ravenous.html" class="portfolio__item">
+                <img src="img/background_search_mobile.jpg" alt="" class="portfolio__img">
+            </a>
+            <!-- Portfolio item 03 -->
+            <a href="jamming.html" class="portfolio__item">
+                <img src="img/background_photo_jamming.jpg" alt="" class="portfolio__img">
+            </a>
+            <!--Portfolio item 04-->
+            <a href="boss-machine.html" class="portfolio__item">
+                <img src="img/boss-machine-meetings.png" alt="" class="portfolio__img">
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <a href="mailto:joao.bertholo@gmail.com" class="footer__link">joao.bertholo@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/bertholo">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/joao-pedro-bertholo-0b74232b9">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/index.js"></script>
+
+</body>
+
 </html>
