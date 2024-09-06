@@ -8,22 +8,22 @@
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
-    
+
     --fw-reg: 300;
     --fw-bold: 900;
-    
+
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-grey: rgb(80, 80, 80);
     --clr-accent: #16e0bd;
-    
+
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
-    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
 
 @media (min-width: 800px) {
@@ -55,7 +55,9 @@ img {
     max-width: 100%;
 }
 
-strong { font-weight: var(--fw-bold) }
+strong {
+    font-weight: var(--fw-bold)
+}
 
 /* Typography */
 
@@ -66,9 +68,17 @@ h3 {
     margin: 0;
 }
 
-h1 { font-size: var(--fs-h1) }
-h2 { font-size: var(--fs-h2) }
-h3 { font-size: var(--fs-h3) }
+h1 {
+    font-size: var(--fs-h1)
+}
+
+h2 {
+    font-size: var(--fs-h2)
+}
+
+h3 {
+    font-size: var(--fs-h3)
+}
 
 
 .section__title {
@@ -103,7 +113,7 @@ h3 { font-size: var(--fs-h3) }
     left: 0;
     right: 0;
     z-index: 100;
-    
+
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
@@ -145,7 +155,7 @@ h3 { font-size: var(--fs-h3) }
     transform: translateX(0);
 }
 
-.nav-open .nav-toggle{
+.nav-open .nav-toggle {
     position: fixed;
 }
 
@@ -185,8 +195,13 @@ h3 { font-size: var(--fs-h3) }
     right: 0;
 }
 
-.hamburger::before { top: 6px; }
-.hamburger::after { bottom: 6px; }
+.hamburger::before {
+    top: 6px;
+}
+
+.hamburger::after {
+    bottom: 6px;
+}
 
 .intro {
     position: relative;
@@ -203,19 +218,19 @@ h3 { font-size: var(--fs-h3) }
         width: min-content;
         margin: 0 auto;
         grid-column-gap: 1em;
-        grid-template-areas: 
+        grid-template-areas:
             "img title"
             "img subtitle";
         grid-template-columns: min-content max-content;
     }
-    
+
     .intro__img {
         grid-area: img;
         min-width: 250px;
         position: relative;
         z-index: 2;
-    }    
-    
+    }
+
     .section__subtitle--intro {
         align-self: start;
         grid-column: -1 / 1;
@@ -231,6 +246,7 @@ h3 { font-size: var(--fs-h3) }
     background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;
+    padding-top: 20px;
 }
 
 .section__title--services {
@@ -264,8 +280,8 @@ h3 { font-size: var(--fs-h3) }
         margin-left: auto;
         margin-right: auto;
     }
-    
-    .service + .service {
+
+    .service+.service {
         margin-left: 2em;
     }
 }
@@ -284,14 +300,14 @@ h3 { font-size: var(--fs-h3) }
         padding-bottom: 2em;
         display: grid;
         grid-template-columns: 1fr 200px;
-        grid-template-areas: 
+        grid-template-areas:
             "title img"
             "subtitle img"
             "text img";
         grid-column-gap: 2em;
     }
 
-    .section__title--about{
+    .section__title--about {
         grid-area: title;
     }
 
@@ -311,13 +327,19 @@ h3 { font-size: var(--fs-h3) }
         z-index: 2;
     }
 
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(15rem, 1fr));
+
+    }
+
 }
 
 .my-work {
     padding: 2em 10em;
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    text-align: center;    
+    text-align: center;
 }
 
 .section__subtitle--work {
@@ -328,18 +350,23 @@ h3 { font-size: var(--fs-h3) }
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: minmax(150px, 1fr)
+    grid-template-columns: repeat(3, minmax(15rem, 1fr));
+
 }
 
 .portfolio__item {
+    margin-top: 3rem;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--clr-accent);
+    width: 15rem;
+    height: 15rem;
 }
 
 .portfolio__img {
     min-width: 100%;
     min-height: 100%;
-    transition: 
+    transition:
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
 }
@@ -355,7 +382,7 @@ h3 { font-size: var(--fs-h3) }
     padding: 2.5em 0;
 }
 
-.footer a { 
+.footer a {
     color: inherit;
     text-decoration: none;
 }
@@ -395,4 +422,3 @@ h3 { font-size: var(--fs-h3) }
     max-width: 1000px;
     margin: 0 auto;
 }
-
