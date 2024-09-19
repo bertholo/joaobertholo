@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joao Bertholo Portifolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/3ead623b8c.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--introduction-->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Project <strong>Budget Buddy</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Full-Stack Web developer</p>
+        <img src="img/budget-buddy-front-page.jpg" alt="budget buddy" class="intro__img">
+    </section>
+    <div class="portfolio-item-individual">
+        <h4><Strong><a style="text-decoration: none;" href="https://bertholo.github.io/budget-buddy/">Click here for
+                    DEMO</a></Strong></h4>
+        <p><strong>NOTE: </strong>connect with the database please go to my github <a
+                href="https://github.com/bertholo/budget-buddy">here</a>,
+            fork the repo, change directory
+            <code>cd back-end</code>
+            install dependencies
+            <code>npm install</code> start the server
+            <code>npm start</code>
+        </p>
+
+
+        <h3 style="text-align: center;">Introduction</h3>
+
+        <p>
+            Budget Buddy is a full-stack application that I am currently working on. It is originally an
+            expense tracker with a transactions history section and some graphs displaying the balance, current month
+            espenditure and history chart. New features will be added in the future.
+        </p>
+        <p>
+            Built using <strong>React</strong>, <strong>Bootstrap</strong> and <strong>Chart.js</strong> as Front End
+            technologies, as well as
+            <strong>Node.js</strong> with the <strong>Express.js</strong> library and <strong>MongoDB</strong> as the
+            database.
+        </p>
+        <img src="img/budget-buddy-body-1.png" alt="budget-buddy" />
+        <p>
+            On the Front End, the App manages State globally with <strong>useContext</strong> that handles the
+            <strong>API requests</strong>
+            for incomes and expenses via the <strong>useState</strong> hook and the errors as well. On the App.js file,
+            State is managed by
+            a function that uses a switch statement to determine which Component to display. The Default is set to be
+            the Dashboard Component.
+        </p>
+        <p>
+            The fun side of this project was to be working with charts via <strong>Chart.js</strong>. It is so many
+            types of charts, datasets and
+            options that you can spend some time playing with all the different layouts. Even though it was fun to work
+            with, it was challenging
+            trying to connect the data from the input of incomes or expenses and the dates with the datasets from the
+            charts.
+        </p>
+
+        <img src="./img/budget-buddy-body-2.png" alt="budget buddy 2" />
+
+        <p>
+            The charts counts with moment.js to set the date format and some helper functions to get the months from
+            transactions, amounts, sort the months
+            in order and group the amounts toguether depending on the chart. If there is no input for a certain month,
+            its amount is set to zero.
+        </p>
+
+        <img src="./img/budget-buddy-body-3.png" alt="budget buddy 3" />
+
+        <p>
+            Incomes and Expenses pages are very similar in layout and functionality. Both of them have an unique icon
+            for each income or expense,
+            there is an input form that adds a new item to the database with the app updating immediately, as well as a
+            delete button that deletes the item
+            from the database with the instant update of the App and finally the total income or expense displayed at
+            the top.
+        </p>
+
+        <p>
+            On the Back End side, I use <strong>morgan</strong> for HTTP request logging and <strong>cors</strong> to
+            manage cross-origin resource sharing.
+            The Application use the standard <strong>RESTful API</strong> to improve scalability and flexibility.
+        </p>
+        <p>
+            The database has two models: Income and Expense. Each model has a title, amount, type, date, description,
+            and category. Validation acordingly.
+            The Schemas were created with <strong>mongoose</strong>.
+        </p>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <a href="mailto:joao.bertholo@gmail.com" class="footer__link">joao.bertholo@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/bertholo">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/joao-pedro-bertholo-0b74232b9">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
