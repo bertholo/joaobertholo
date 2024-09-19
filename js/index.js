@@ -1,7 +1,7 @@
 const data = [
-    { aLink: "bertholo.github.io/sales-rep-ana/", imgSrc: "img/direcionaco.jpg" },
+    { aLink: "http://bertholo.github.io/sales-rep-ana/", imgSrc: "img/direcionaco.jpg" },
     { aLink: "budget-buddy.html", imgSrc: "img/budget-buddy-front-page.jpg" },
-    { aLink: "bertholo.github.io/weather-app/", imgSrc: "img/weather-app-front-page.jpg" },
+    { aLink: "http://bertholo.github.io/weather-app/", imgSrc: "img/weather-app-front-page.jpg" },
     { aLink: "ravenous.html", imgSrc: "img/background_search_mobile.jpg" },
     { aLink: "jamming.html", imgSrc: "img/background_photo_jamming.jpg" },
     { aLink: "boss-machine.html", imgSrc: "img/boss-machine-meetings.png" }
