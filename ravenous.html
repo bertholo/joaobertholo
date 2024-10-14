@@ -1,88 +1,115 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Joao Bertholo Portifolio Website</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
-        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
-        <script src="https://kit.fontawesome.com/3ead623b8c.js" crossorigin="anonymous"></script>
 
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Go back Home</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!--introduction-->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                Project <strong>RAVENOUS</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">front-end Project</p>
-            <img src="img/background_search_mobile.jpg" alt="logo of the Project" class="intro__img">
-        </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joao Bertholo Portifolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/3ead623b8c.js" crossorigin="anonymous"></script>
 
-        <div class="portfolio-item-individual">
-            <p><strong>Ravenous</strong> is my first <strong>React</strong> application built on <strong>HTML5</strong>, <strong>JavaScript</strong> and <strong>CSS3</strong>.
-                It is essentially a restaurant recomendation dynamic website that allows users to search for local businesses based on their location, term and sorting options.
-             All of this made possible with the implementation of asyncronous requests for the <strong>yelp API</strong>.</p>
-            <img src="img/heading.png" alt="heading img" />
-            <p>Ravenous is simple and dynamic with the implementation of components that manages state using 'useState' hook, 
-                dynamic styles for scalability and props for making the project reusable and modular.</p>
-            <h3><strong>Here is how it works:</strong></h3>
-            <p>There is a component named SearchBar responsible for aking the get request for the Yelp API, 
-                you enter the location of your choice and the term(eg: japanese food). The SearchBar component has an initial State of "Best Match", so it defaults to it if no sorting option is selected.
-                There is an error handling Try-catch block for handling errors during the request. If the request is successful, an status of 200 
-                will be logged to the console and an array of restaurants data will be sent by the API as a json response. The otherwise is that a message 
-                error will be logged along with the status response.
-            </p>
-            <p>Then the BusinessList component is responsible for mapping through the response creating instances of each business. The relevant data is 
-                stored in each Business component and the result is an array of mock restaurants displayed to the user.
-            </p>
-            <img src="img/body.png" alt="businesses list" />
-            <p>The project does not work with a server or database and the businesses displayed are not selectable. Functionality will be developed 
-                soon.
-            </p>
-            <p>Note that if the project is to be forked (which involves creating your own copy of this repository on GitHub) from GitHub,
-                 an yelp api key has to be provided to the code.
-            </p>
-            <p>The project is using cors-anywhere, which serves as a proxy server and adds essential CORS headers for development purposes.</p>
-            <h3><strong>DEMO:</strong></h3>
-            <p>Go to <a href="https://cors-anywhere.herokuapp.com/">https://cors-anywhere.herokuapp.com/</a> to request a temporary access and then click
-                on my github repo: <a href="https://bertholo.github.io/ravenous-app/">https://bertholo.github.io/ravenous-app/</a></p>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWWK22TELJ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        </div>
+    gtag('config', 'G-ZWWK22TELJ');
+</script>
 
-
-          <!-- Footer -->
-        <footer class="footer" id="contact">
-            <a href="mailto:joao.bertholo@gmail.com" class="footer__link">joao.bertholo@gmail.com</a>
-            <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/bertholo">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.linkedin.com/in/joao-pedro-bertholo-0b74232b9">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </li>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Go back Home</a></li>
             </ul>
-        </footer>
+        </nav>
+    </header>
+    <!--introduction-->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Project <strong>RAVENOUS</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">front-end Project</p>
+        <img src="img/background_search_mobile.jpg" alt="logo of the Project" class="intro__img">
+    </section>
 
-        <script src="js/index.js"></script>
+    <div class="portfolio-item-individual">
+        <p><strong>Ravenous</strong> is my first <strong>React</strong> application built on <strong>HTML5</strong>,
+            <strong>JavaScript</strong> and <strong>CSS3</strong>.
+            It is essentially a restaurant recomendation dynamic website that allows users to search for local
+            businesses based on their location, term and sorting options.
+            All of this made possible with the implementation of asyncronous requests for the <strong>yelp API</strong>.
+        </p>
+        <img src="img/heading.png" alt="heading img" />
+        <p>Ravenous is simple and dynamic with the implementation of components that manages state using 'useState'
+            hook,
+            dynamic styles for scalability and props for making the project reusable and modular.</p>
+        <h3><strong>Here is how it works:</strong></h3>
+        <p>There is a component named SearchBar responsible for aking the get request for the Yelp API,
+            you enter the location of your choice and the term(eg: japanese food). The SearchBar component has an
+            initial State of "Best Match", so it defaults to it if no sorting option is selected.
+            There is an error handling Try-catch block for handling errors during the request. If the request is
+            successful, an status of 200
+            will be logged to the console and an array of restaurants data will be sent by the API as a json response.
+            The otherwise is that a message
+            error will be logged along with the status response.
+        </p>
+        <p>Then the BusinessList component is responsible for mapping through the response creating instances of each
+            business. The relevant data is
+            stored in each Business component and the result is an array of mock restaurants displayed to the user.
+        </p>
+        <img src="img/body.png" alt="businesses list" />
+        <p>The project does not work with a server or database and the businesses displayed are not selectable.
+            Functionality will be developed
+            soon.
+        </p>
+        <p>Note that if the project is to be forked (which involves creating your own copy of this repository on GitHub)
+            from GitHub,
+            an yelp api key has to be provided to the code.
+        </p>
+        <p>The project is using cors-anywhere, which serves as a proxy server and adds essential CORS headers for
+            development purposes.</p>
+        <h3><strong>DEMO:</strong></h3>
+        <p>Go to <a href="https://cors-anywhere.herokuapp.com/">https://cors-anywhere.herokuapp.com/</a> to request a
+            temporary access and then click
+            on my github repo: <a
+                href="https://bertholo.github.io/ravenous-app/">https://bertholo.github.io/ravenous-app/</a></p>
 
-    </body>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <a href="mailto:joao.bertholo@gmail.com" class="footer__link">joao.bertholo@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/bertholo">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/joao-pedro-bertholo-0b74232b9">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/index.js"></script>
+
+</body>
+
 </html>
