@@ -283,7 +283,6 @@ section.show-content:nth-of-type(3) {
         padding: 2em 0;
         display: grid;
         width: min-content;
-        min-height: 100vh;
         margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas:
@@ -292,6 +291,10 @@ section.show-content:nth-of-type(3) {
         grid-template-columns: min-content max-content;
         justify-items: center;
         align-items: center;
+    }
+
+    .intro.full-height {
+        min-height: 100vh;
     }
 
     .intro__img {
