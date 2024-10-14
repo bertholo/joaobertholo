@@ -11,6 +11,9 @@ const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link');
 const showInfo = document.querySelectorAll('.show-info');
 const portfolio = document.querySelector('.portfolio');
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', checkSections);
 
 navToggle.addEventListener('click', () => {
     document.body.classList.toggle('nav-open');
@@ -22,27 +25,43 @@ navLinks.forEach(link => {
     })
 })
 
-window.addEventListener('DOMContentLoaded', () => {
-    data.forEach(item => {
-        const portfolioItem = document.createElement('div');
 
-        portfolioItem.classList.add('portfolio-item');
+data.forEach(item => {
+    const portfolioItem = document.createElement('div');
 
-        portfolioItem.style.backgroundImage = `url(${item.imgSrc})`;
-        portfolioItem.style.backgroundSize = 'cover';
-        portfolioItem.style.backgroundPosition = 'center';
-        portfolioItem.style.cursor = 'pointer';
+    portfolioItem.classList.add('portfolio-item');
 
-        portfolioItem.addEventListener('click', () => {
-            window.location.href = item.aLink;
-        });
+    portfolioItem.style.backgroundImage = `url(${item.imgSrc})`;
+    portfolioItem.style.backgroundSize = 'cover';
+    portfolioItem.style.backgroundPosition = 'center';
+    portfolioItem.style.cursor = 'pointer';
 
-        portfolio.appendChild(portfolioItem);
+    portfolioItem.addEventListener('click', () => {
+        window.location.href = item.aLink;
+    });
 
-        portfolioItem.addEventListener('mouseover', () => {
-            
-        })
+    portfolio.appendChild(portfolioItem);
+
+    portfolioItem.addEventListener('mouseover', () => {
+
     })
 })
+
+
+function checkSections() {
+    const triggerBottom = window.innerHeight;
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if(sectionTop < triggerBottom) {
+            section.classList.add('show-content');
+        } else {
+            section.classList.remove('show-content');
+        }
+    })
+}
+
+
 
 

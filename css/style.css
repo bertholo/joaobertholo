@@ -35,6 +35,42 @@
     }
 }
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(30%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* General styles */
 
 html {
@@ -84,13 +120,37 @@ h3 {
     font-size: var(--fs-h3)
 }
 
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+section.show-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section.show-content:nth-of-type(1) {
+    animation: 1s ease-in-out 0s 1 slideInFromRight;
+}
+
+section.show-content:nth-of-type(2) {
+    animation: 1s ease-in-out 0s 1 slideInFromLeft;
+}
+
+section.show-content:nth-of-type(3) {
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+}
 
 .section__title {
     margin-bottom: .25em;
 }
 
 .section__title--intro {
+    padding-left: 40px;
     font-weight: var(--fw-reg);
+    animation: 0.6s ease-out 0s 1 slideInFromRight;
 }
 
 .section__title--intro strong {
@@ -98,8 +158,10 @@ h3 {
 }
 
 .section__subtitle {
+    padding-right: 20px;
     margin: 0;
     font-size: var(--fs-h3);
+    animation: 0.6s ease-out 0s 1 slideInFromLeft;
 }
 
 .section__subtitle--intro,
@@ -221,12 +283,15 @@ h3 {
         padding: 2em 0;
         display: grid;
         width: min-content;
+        min-height: 100vh;
         margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas:
             "img title"
             "img subtitle";
         grid-template-columns: min-content max-content;
+        justify-items: center;
+        align-items: center;
     }
 
     .intro__img {
@@ -234,6 +299,7 @@ h3 {
         min-width: 250px;
         position: relative;
         z-index: 2;
+        animation: 0.6s ease-out 0s 1 slideInFromLeft;
     }
 
     .section__subtitle--intro {
@@ -357,7 +423,7 @@ h3 {
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
 }
 
@@ -395,7 +461,7 @@ h3 {
     z-index: 5;
 }
 
-.show-info:hover .info-popup{
+.show-info:hover .info-popup {
     display: block;
 }
 
