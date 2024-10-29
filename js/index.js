@@ -1,10 +1,10 @@
 const data = [
-    { aLink: "http://bertholo.github.io/sales-rep-ana/", imgSrc: "img/direcionaco.jpg" },
-    { aLink: "budget-buddy.html", imgSrc: "img/budget-buddy-front-page.jpg" },
-    { aLink: "./weather-app.html", imgSrc: "img/weather-app-front-page.jpg" },
-    { aLink: "ravenous.html", imgSrc: "img/background_search_mobile.jpg" },
-    { aLink: "jamming.html", imgSrc: "img/background_photo_jamming.jpg" },
-    { aLink: "boss-machine.html", imgSrc: "img/boss-machine-meetings.png" }
+    { aLink: "http://bertholo.github.io/sales-rep-ana/", imgSrc: "img/direcionaco.jpg", description: "Client's Project" },
+    { aLink: "budget-buddy.html", imgSrc: "img/budget-buddy-front-page.jpg", description: "Expense Tracker" },
+    { aLink: "./weather-app.html", imgSrc: "img/weather-app-front-page.jpg", description: "Weather App" },
+    { aLink: "ravenous.html", imgSrc: "img/background_search_mobile.jpg", description: "Restaurant Finder" },
+    { aLink: "jamming.html", imgSrc: "img/background_photo_jamming.jpg", description: "Spotify Post request" },
+    { aLink: "boss-machine.html", imgSrc: "img/boss-machine-meetings.png", description: "Back End Project" }
 ];
 
 const navToggle = document.querySelector('.nav-toggle');
@@ -28,23 +28,21 @@ navLinks.forEach(link => {
 
 data.forEach(item => {
     const portfolioItem = document.createElement('div');
+    const itemDescription = document.createElement('div');
 
     portfolioItem.classList.add('portfolio-item');
+    itemDescription.classList.add('item-description');
 
     portfolioItem.style.backgroundImage = `url(${item.imgSrc})`;
-    portfolioItem.style.backgroundSize = 'cover';
-    portfolioItem.style.backgroundPosition = 'center';
-    portfolioItem.style.cursor = 'pointer';
+
+    itemDescription.textContent = item.description;
 
     portfolioItem.addEventListener('click', () => {
         window.location.href = item.aLink;
     });
 
+    portfolioItem.appendChild(itemDescription);
     portfolio.appendChild(portfolioItem);
-
-    portfolioItem.addEventListener('mouseover', () => {
-
-    })
 })
 
 
