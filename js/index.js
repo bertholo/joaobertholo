@@ -1,5 +1,5 @@
 const data = [
-    { aLink: "http://bertholo.github.io/sales-rep-ana/", imgSrc: "img/direcionaco.jpg", description: "Client's Project" },
+    { aLink: "http://direcionaco.com", imgSrc: "img/direcionaco.jpg", description: "Client's Project" },
     { aLink: "budget-buddy.html", imgSrc: "img/budget-buddy-front-page.jpg", description: "Expense Tracker" },
     { aLink: "./weather-app.html", imgSrc: "img/weather-app-front-page.jpg", description: "Weather App" },
     { aLink: "ravenous.html", imgSrc: "img/background_search_mobile.jpg", description: "Restaurant Finder" },
